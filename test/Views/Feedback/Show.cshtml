@@ -1,0 +1,30 @@
+@{
+    ViewData["Title"] = "Login Page";
+    List<Feedback> feed = ViewData["fee"] as List<Feedback>;
+}
+
+<table>
+    <tr>
+        <td>Id</td>
+        <td>Name</td>
+        <td>Communication</td>
+        <td>Entusiasm</td>
+        <td>Action</td>
+    </tr>
+
+    @foreach(Feedback back in feed){
+        <tr>
+            <td>@back.Id</td>
+            <td>@back.Name</td>
+            <td>@back.Communication</td>
+            <td>@back.Entusiasm</td>
+            <td>
+                <button><a asp-controller="Feedback" asp-action="Delete" asp-route-id="@back.Id">Delete</a></button>
+                <button><a asp-controller="Feedback" asp-action="Edit" asp-route-id="@back.Id">Edit</a></button>
+            </td>
+        </tr>
+        
+    }
+
+    <tr><button><a asp-controller="Feedback" asp-action="Create">Create</a></button></tr>
+</table>

@@ -1,0 +1,14 @@
+@model test.Models.Feedback;
+@{
+    ViewData["Title"] = "Login Page";
+}
+
+<form action="Create" method="post">
+Id: <input type="text" asp-for="Id"><br>
+Name: <input type="text" asp-for="Name"><br>
+Communication: <input type="text" asp-for="Communication"><br>
+Entusiasm: <input type="text" asp-for="Entusiasm"><br>
+Rating: <input type="text" asp-for="Feedback1"><br>
+
+    <button type="submit">Add</button>
+</form>

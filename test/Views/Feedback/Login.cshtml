@@ -1,0 +1,10 @@
+@model test.Models.Admin;
+@{
+    ViewData["Title"] = "Login Page";
+}
+
+<form action="Login" method="post">
+    User: <input type="text" asp-for="User"><br>
+    Pass: <input type="text" asp-for="Pass"><br>
+    <button type="submit">login</button>
+</form>
